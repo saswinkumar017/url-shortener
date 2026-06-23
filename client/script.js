@@ -15,7 +15,7 @@ async function shortenUrl(){
     );
     const data = await response.json();
     console.log(data);
-    const shorturl=`https://url-shortener-n.netlify.app/${data.shortCode}`;
+    const shorturl=`https://url-shortener-production-00ad.up.railway.app/${data.shortCode}`;
     
     document.getElementById("short-url").href=shorturl;
     document.getElementById("short-url").innerText=shorturl;

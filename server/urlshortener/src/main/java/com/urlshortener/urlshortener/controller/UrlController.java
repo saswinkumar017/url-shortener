@@ -11,6 +11,8 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestParam;
 
+import org.springframework.http.HttpHeaders;
+import java.net.URI;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -51,8 +53,11 @@ public class UrlController {
     }
     
     @GetMapping("/{shortCode}")
-    public ResponseEntity<String> getOriginalUrl(@PathVariable String shortCode){
-        return ResponseEntity.ok(urlService.getOriginalUrl(shortCode));
+    public ResponseEntity<Void> getOriginalUrl(@PathVariable String shortCode){
+        String url=urlService.getOriginalUrl(shortCode);
+        HttpHeaders h=new HttpHeaders();
+        h.setLocation(URI.create(url));
+        return new ResponseEntity<>(h,HttpStatus.FOUND);
     }
     
 }
