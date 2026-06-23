@@ -2,7 +2,7 @@ async function shortenUrl(){
     const url=document.getElementById("url").value;
 
     const response = await fetch(
-        "http://localhost:8080/add",
+        "https://url-shortener-production-00ad.up.railway.app/add",
         {
             method:"POST",
             headers:{
@@ -15,7 +15,7 @@ async function shortenUrl(){
     );
     const data = await response.json();
     console.log(data);
-    const shorturl=`http://127.0.0.1:5500/client/${data.shortCode}`;
+    const shorturl=`https://url-shortener-n.netlify.app/${data.shortCode}`;
     
     document.getElementById("short-url").href=shorturl;
     document.getElementById("short-url").innerText=shorturl;
@@ -38,7 +38,7 @@ if ( shortCode &&shortCode!=="client") {
 
     const response =
         await fetch(
-            `http://localhost:8080/${shortCode}`
+            `https://url-shortener-production-00ad.up.railway.app/${shortCode}`
         );
         console.log(response);
     const originalUrl=await response.text();
