@@ -25,7 +25,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 
 
 @RestController
-@CrossOrigin("http://127.0.0.1:5500/")
+@CrossOrigin("https://url-shortener-n.netlify.app/")
 public class UrlController {
     
     @Autowired
