@@ -1,3 +1,9 @@
+function clearUrl(){
+    document.getElementById("url").value="";
+    document.getElementById("result-card").classList.add("hidden");
+    document.getElementById("url").focus();
+}
+
 async function shortenUrl(){
     const url=document.getElementById("url").value;
 

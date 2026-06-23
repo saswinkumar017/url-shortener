@@ -135,6 +135,11 @@ body {
     color: #5a5a6a;
 }
 
+.btn-group {
+    display: flex;
+    gap: 6px;
+}
+
 #shorten-btn {
     display: flex;
     align-items: center;
@@ -159,6 +164,30 @@ body {
 
 #shorten-btn:active {
     transform: scale(0.97);
+}
+
+#clear-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 42px;
+    padding: 0;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.04);
+    color: #7a7a8a;
+    cursor: pointer;
+    transition: background 0.2s, color 0.2s, border-color 0.2s;
+}
+
+#clear-btn:hover {
+    background: rgba(255, 255, 255, 0.08);
+    color: #e1e1e6;
+    border-color: rgba(255, 255, 255, 0.18);
+}
+
+#clear-btn:active {
+    background: rgba(255, 255, 255, 0.12);
 }
 
 #result-card {
@@ -359,9 +388,18 @@ body {
         padding: 14px 16px;
     }
 
+    .btn-group {
+        width: 100%;
+    }
+
     #shorten-btn {
+        flex: 1;
         justify-content: center;
         padding: 14px 24px;
+    }
+
+    #clear-btn {
+        width: 50px;
     }
 
     .features {
