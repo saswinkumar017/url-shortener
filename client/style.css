@@ -1,0 +1,62 @@
+body{
+    background: #BBD2C5;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #292E49, #536976, #2f2d3f);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #292E49, #536976, #58645d); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+.dh1{
+    margin: 0 auto;
+     background: #000;
+    color: #fff;
+    border:1px solid #ddd;
+    border-radius:10px;
+    width: 600px;
+    height: 100px;
+    margin-bottom: 50px;
+    justify-content: center;
+    align-items: center;
+display: flex;
+}
+
+.container{
+    background: #000;
+    color: #fff;
+    width: 400px;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 auto;
+    border:1px solid #ddd;
+    border-radius:10px;
+}
+#result-card{
+    margin-top:20px;
+    margin: 0 auto;
+    padding:15px;
+    width:500px;
+    background: #000;
+    color: #fff;
+    border:1px solid #ddd;
+    border-radius:10px;
+}
+
+.url-box{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:10px;
+    background:#fff;
+    width: 500px;
+}
+
+.url-box a{
+    padding: 5px;
+    padding-bottom: 5px;
+    text-decoration:none;
+}
+
+.hidden{
+    display:none;
+}
+

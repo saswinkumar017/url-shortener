@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Url Shortener</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+        <div class="dh1"> <h1>URL Shortener</h1></div>
+     <div class="container">
+
+        <h1>Enter Long URL</h1>
+        <input type="text" id="url" placeholder="Enter URL"><br>    
+        <button onclick="shortenUrl()">Shorten</button><br>
+
+    </div><br>
+    <div id="result-card" class="hidden">
+
+    <p>Short URL</p>
+
+    <div class="url-box">
+
+        <a id="short-url" target="_blank"></a>
+
+        <button id="copy-btn">
+            📋
+        </button>
+
+    </div>
+
+</div>
+    <script src="script.js"></script>
+</body>
+</html>
